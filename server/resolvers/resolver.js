@@ -15,7 +15,14 @@ const resolvers = {
 
     Mutation: {
         createAuthor: (parent, args) => {
-            
+            console.log("parent: ", parent)
+            authors.push({...args})
+            return authors.find(author => author.id == args.id)
+        },
+        createBook: (parent, args) => {
+            console.log(args);
+            books.push({...args})
+            return books.find(book => book.id == args.id)
         }
     }
 }

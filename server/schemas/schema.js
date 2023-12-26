@@ -23,7 +23,7 @@ type Query {
 }
 
 type Mutation {
-    createBook(id: ID!, name: String!, price: Float!): Book
+    createBook(id: ID!, name: String!, price: Float!, authorId: ID!): Book
     createAuthor(id: ID!, fullname: String): Author
 }
 `
